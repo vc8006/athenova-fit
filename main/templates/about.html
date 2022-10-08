@@ -1,6 +1,26 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block bodyContent %}
+
+<style>
+    /* .img-resize{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    margin-top: 8%;
+    cursor: pointer;
+  } */
+
+  .card-img-top {
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+}
+
+</style>
+
 <div class="container-fluid" style="font-family: amanda;">
 
   <h1 style="color: #e6b58d;" class="text-center my-3">About Us </h1>
@@ -31,7 +51,7 @@
    <!-- Team Member 2 -->
    <div class="col-xl-6 col-md-6 mb-4">
     <div class="card border-0 shadow">
-      <img src="https://source.unsplash.com/9UVmlIb0wJU/500x350" class="card-img-top" alt="...">
+      <img src="{% static 'images/simona.png' %}" class="card-img-top" alt="...">
       <div class="card-body text-center">
         <h5 class="card-title mb-0">Simona Jadronova</h5>
         <div class="card-text text-black-50">Pilates Instructor, 3D anatomy, Personal Trainer</div>
@@ -40,7 +60,7 @@
   </div>
     <div class="col-xl-6 col-md-6 mb-4">
       <div class="card border-0 shadow">
-        <img src="https://source.unsplash.com/TMgQMXoglsM/500x350" class="card-img-top" alt="...">
+        <img src="{% static 'images/dummy.jpg' %}" class="card-img-top" alt="...">
         <div class="card-body text-center">
           <h5 class="card-title mb-0">Vishal Seth</h5>
           <div class="card-text text-black-50">Personal Trainer</div>
@@ -61,7 +81,7 @@
 
   <div class="col-xl-3 col-sm-6 mb-5" style="height: 100%;">
     <div class="bg-white rounded shadow-sm py-5 px-4"><img
-        src="https://bootstrapious.com/i/snippets/sn-team/teacher-4.jpg" alt="" width="100"
+        src="{% static 'images/dummy.jpg' %}" alt="" width="100"
         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
       <h5 class="mb-0">Karan Unchavale</h5><span class="small text-uppercase text-muted">Personal Trainer</span>
       <ul class="social mb-0 list-inline mt-3">
@@ -75,7 +95,7 @@
 
   <div class="col-xl-3 col-sm-6 mb-5" style="height: 100%;">
     <div class="bg-white rounded shadow-sm py-5 px-4"><img
-        src="https://bootstrapious.com/i/snippets/sn-team/teacher-4.jpg" height=" alt="" width="100"
+        src="{% static 'images/dummy.jpg' %}" height=" alt="" width="100"
         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
       <h5 class="mb-0">Shridhar Gaikwad</h5><span class="small text-uppercase text-muted">Personal Trainer</span>
       <ul class="social mb-0 list-inline mt-3">
@@ -89,7 +109,7 @@
 
   <div class="col-xl-3 col-sm-6 mb-5" style="height: 100%;">
     <div class="bg-white rounded shadow-sm py-5 px-4"><img
-        src="https://bootstrapious.com/i/snippets/sn-team/teacher-4.jpg" alt="" width="100"
+        src="{% static 'images/dummy.jpg' %}" alt="" width="100"
         class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
       <h5 class="mb-0">Sue Ellen Castellino</h5><span class="small text-uppercase text-muted">Personal Trainer</span>
       <ul class="social mb-0 list-inline mt-3">
