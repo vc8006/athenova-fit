@@ -11,6 +11,13 @@
   src: url(dobkin.ttf);
 }
 
+.center-cropped {
+  width: 100px;
+  height: 100px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 /* @font-face {
   font-family: amanda;
   src: url(amanda.ttf);
@@ -90,16 +97,18 @@ html,body {
 }
 
 .service-box {
-    text-align: center;
+    /* text-align: center;
     box-shadow: var(--shadpw);
     border-radius: 5px;
-    padding: 1rem;
-    transition: all 0.2s linear;
-    height: 100%;
+    padding: 1rem; */
+    transition: all 0.3s linear;
+    /* height: 100%; */
   }
 
 .service-box:hover {
-    transform: translateY(-3rem);
+    /* transform: translateY(-3rem); */
+    transform: scale(1.1);
+    z-index: 5;
     cursor: pointer;
   }
 

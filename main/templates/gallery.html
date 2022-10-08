@@ -2,11 +2,302 @@
 {% load static %}
 
 {% block bodyContent %}
+
+<style>
+  .img-resize{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    margin-top: 8%;
+  }
+
+
+  html {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.box-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 35px 15px;
+  width: 100%;
+}
+
+@media screen and (min-width:1380px) {
+  .box-container {
+    flex-direction: row
+  }
+}
+
+.box-item {
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  width: 415px;
+  margin-bottom: 35px;
+  max-width: 100%;
+}
+
+.flip-box {
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+
+.flip-box-front,
+.flip-box-back {
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  min-height: 475px;
+  -ms-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+  transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+  -webkit-transition: transform 0.7s cubic-bezier(.4,.2,.2,1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  -ms-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-front {
+  -ms-transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-box-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-back {
+  -ms-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-box .inner {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 60px;
+  outline: 1px solid transparent;
+  -webkit-perspective: inherit;
+  perspective: inherit;
+  z-index: 2;
+  
+  transform: translateY(-50%) translateZ(60px) scale(.94);
+  -webkit-transform: translateY(-50%) translateZ(60px) scale(.94);
+  -ms-transform: translateY(-50%) translateZ(60px) scale(.94);
+  top: 50%;
+}
+
+.flip-box-header {
+  font-size: 34px;
+}
+
+.flip-box p {
+  font-size: 20px;
+  line-height: 1.5em;
+}
+
+.flip-box-img {
+  margin-top: 25px;
+}
+
+.flip-box-button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 25px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+}
+</style>
+
 <div class="container-fluid">
 
   <h1 style="color: #e6b58d;font-size:3rem;font-family: amanda;" class="text-center"> Gallery </h1>
   <!-- Gallery -->
+
   <div class="row">
+
+
+    <div class="box-item col-md-4">
+      <div class="flip-box">
+        <div class="flip-box-front text-center" style="background-image: url('{% static 'images/pics/1.jpg' %}');">
+        </div>
+        <div class="flip-box-back text-center" style="background-image: url('{% static 'images/pics/2.jpg' %}');">
+        </div>
+      </div>
+    </div>
+    <div class="box-item col-md-4">
+      <div class="flip-box">
+        <div class="flip-box-front text-center" style="background-image: url('{% static 'images/pics/3.jpg' %}');">
+        </div>
+        <div class="flip-box-back text-center" style="background-image: url('{% static 'images/pics/4.jpg' %}');">
+        </div>
+      </div>
+    </div>
+    <div class="box-item col-md-4">
+      <div class="flip-box">
+        <div class="flip-box-front text-center" style="background-image: url('{% static 'images/pics/5.jpg' %}');">
+        </div>
+        <div class="flip-box-back text-center" style="background-image: url('{% static 'images/pics/6.jpg' %}');">
+        </div>
+      </div>
+    </div>
+    <div class="box-item col-md-4">
+      <div class="flip-box">
+        <div class="flip-box-front text-center" style="background-image: url('{% static 'images/pics/7.jpg' %}');">
+        </div>
+        <div class="flip-box-back text-center" style="background-image: url('{% static 'images/pics/8.jpg' %}');">
+        </div>
+      </div>
+    </div>
+
+    <div class="box-item col-md-4">
+      <div class="flip-box">
+        <div class="flip-box-front text-center" style="background-image: url('{% static 'images/pics/9.jpg' %}');">
+        </div>
+        <div class="flip-box-back text-center" style="background-image: url('{% static 'images/pics/10.jpg' %}');">
+        </div>
+      </div>
+    </div>
+    <div class="box-item col-md-4">
+      <div class="flip-box">
+        <div class="flip-box-front text-center" style="background-image: url('{% static 'images/pics/11.jpg' %}');">
+        </div>
+        <div class="flip-box-back text-center" style="background-image: url('{% static 'images/pics/12.jpg' %}');">
+        </div>
+      </div>
+    </div>
+    <div class="box-item col-md-4">
+      <div class="flip-box">
+        <div class="flip-box-front text-center" style="background-image: url('{% static 'images/pics/13.jpg' %}');">
+        </div>
+        <div class="flip-box-back text-center" style="background-image: url('{% static 'images/pics/14.jpg' %}');">
+        </div>
+      </div>
+    </div>
+    <div class="box-item col-md-4">
+      <div class="flip-box">
+        <div class="flip-box-front text-center" style="background-image: url('{% static 'images/pics/15.jpg' %}');">
+        </div>
+        <div class="flip-box-back text-center" style="background-image: url('{% static 'images/pics/16.jpg' %}');">
+        </div>
+      </div>
+    </div>
+
+    <div class="box-item col-md-4">
+      <div class="flip-box">
+        <div class="flip-box-front text-center" style="background-image: url('{% static 'images/pics/17.jpg' %}');">
+        </div>
+        <div class="flip-box-back text-center" style="background-image: url('{% static 'images/pics/18.jpg' %}');">
+        </div>
+      </div>
+    </div>
+<!-- 
+    <div class="col-md-4">
+      <img class="img-responsive service-box img-resize" src="{% static 'images/pics/1.jpg' %}" alt="">
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive service-box img-resize" src="{% static 'images/pics/2.jpg' %}" alt="">
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive service-box img-resize" src="{% static 'images/pics/3.jpg' %}" alt="">
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive service-box img-resize" src="{% static 'images/pics/4.jpg' %}" alt="">
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive service-box img-resize" src="{% static 'images/pics/5.jpg' %}" alt="">
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive service-box img-resize" src="{% static 'images/pics/6.jpg' %}" alt="">
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive service-box img-resize" src="{% static 'images/pics/7.jpg' %}" alt="">
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive service-box img-resize" src="{% static 'images/pics/8.jpg' %}" alt="">
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive service-box img-resize" src="{% static 'images/pics/9.jpg' %}" alt="">
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive service-box img-resize" src="{% static 'images/pics/10.jpg' %}" alt="">
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive service-box img-resize" src="{% static 'images/pics/11.jpg' %}" alt="">
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive service-box img-resize" src="{% static 'images/pics/12.jpg' %}" alt="">
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive service-box img-resize" src="{% static 'images/pics/13.jpg' %}" alt="">
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive service-box img-resize" src="{% static 'images/pics/14.jpg' %}" alt="">
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive service-box img-resize" src="{% static 'images/pics/15.jpg' %}" alt="">
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive service-box img-resize" src="{% static 'images/pics/16.jpg' %}" alt="">
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive service-box img-resize" src="{% static 'images/pics/17.jpg' %}" alt="">
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive service-box img-resize" src="{% static 'images/pics/18.jpg' %}" alt="">
+    </div> -->
+  </div>
+
+  <!-- <div class="row">
     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
       <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
         class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
@@ -30,7 +321,112 @@
       <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp" class="w-100 shadow-1-strong rounded mb-4"
         alt="Yosemite National Park" />
     </div>
-  </div>
+  </div> -->
+
+
+  <!-- <div class="row">
+    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+      <img src="{% static 'images/pics/6.jpg' %}"
+        class="w-100 shadow-1-strong rounded mb-4" alt="" />
+
+      <img src="{% static 'images/pics/2.jpg' %}" class="w-100 shadow-1-strong rounded mb-4"
+        alt="" />
+    </div>
+
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <img src="{% static 'images/pics/3.jpg' %}" class="w-100 shadow-1-strong rounded mb-4"
+        alt="" />
+
+      <img src="{% static 'images/pics/4.jpg' %}"
+        class="w-100 shadow-1-strong rounded mb-4" alt="" />
+    </div>
+
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <img src="{% static 'images/pics/5.jpg' %}"
+        class="w-100 shadow-1-strong rounded mb-4" alt="" />
+
+      <img src="{% static 'images/pics/1.jpg' %}" class="w-100 shadow-1-strong rounded mb-4"
+        alt="" />
+    </div>
+  </div> -->
+
+  <!-- <div class="row">
+    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+      <img src="{% static 'images/pics/7.jpg' %}"
+        class="w-100 shadow-1-strong rounded mb-4" alt="" />
+
+      <img src="{% static 'images/pics/8.jpg' %}" class="w-100 shadow-1-strong rounded mb-4"
+        alt="" />
+    </div>
+
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <img src="{% static 'images/pics/9.jpg' %}" class="w-100 shadow-1-strong rounded mb-4"
+        alt="" />
+
+      <img src="{% static 'images/pics/10.jpg' %}"
+        class="w-100 shadow-1-strong rounded mb-4" alt="" />
+    </div>
+
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <img src="{% static 'images/pics/11.jpg' %}"
+        class="w-100 shadow-1-strong rounded mb-4" alt="" />
+
+      <img src="{% static 'images/pics/12.jpg' %}" class="w-100 shadow-1-strong rounded mb-4"
+        alt="" />
+    </div>
+  </div> -->
+
+  <!-- <div class="row">
+    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+      <img src="{% static 'images/pics/13.jpg' %}"
+        class="w-100 shadow-1-strong rounded mb-4" alt="" />
+
+      <img src="{% static 'images/pics/14.jpg' %}" class="w-100 shadow-1-strong rounded mb-4"
+        alt="" />
+    </div>
+
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <img src="{% static 'images/pics/15.jpg' %}" class="w-100 shadow-1-strong rounded mb-4"
+        alt="" />
+
+      <img src="{% static 'images/pics/16.jpg' %}"
+        class="w-100 shadow-1-strong rounded mb-4" alt="" />
+    </div>
+
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <img src="{% static 'images/pics/17.jpg' %}"
+        class="w-100 shadow-1-strong rounded mb-4" alt="" />
+
+      <img src="{% static 'images/pics/18.jpg' %}" class="w-100 shadow-1-strong rounded mb-4"
+        alt="" />
+    </div>
+  </div> -->
+
+  <!-- <div class="row" >
+    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0" style="height: 700px;">
+      <img src="{% static 'images/pics/6.jpg' %}"
+        class="w-100 shadow-1-strong rounded mb-4" height="35%" alt="" />
+
+      <img src="{% static 'images/pics/5.jpg' %}" class="w-100 shadow-1-strong rounded mb-4" height="65%"
+        alt="" />
+    </div>
+
+    <div class="col-lg-4 mb-4 mb-lg-0" style="height: 700px;">
+      <img src="{% static 'images/pics/3.jpg' %}" height="65%" class="w-100 shadow-1-strong rounded mb-4"
+        alt="" />
+
+      <img src="{% static 'images/pics/4.jpg' %}"
+        class="w-100 shadow-1-strong rounded mb-4" height="35%" alt="" />
+    </div>
+
+    <div class="col-lg-4 mb-4 mb-lg-0" style="height: 700px;">
+      <img src="{% static 'images/pics/2.jpg' %}"
+        class="w-100 shadow-1-strong rounded mb-4" height="35%" alt="" />
+
+      <img src="{% static 'images/pics/1.jpg' %}" height="65%" class="w-100 shadow-1-strong rounded mb-4"
+        alt="" />
+    </div>
+  </div> -->
   <!-- Gallery -->
 
   <!-- <div class="row">
