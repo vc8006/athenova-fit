@@ -1,4 +1,3 @@
-import numbers
 from django.shortcuts import render
 from .models import Image,User
 from django.shortcuts import redirect
@@ -23,8 +22,13 @@ def contactS(request):
         subject = request.POST.get("subject")
         message = request.POST.get('message')
         date = request.POST.get('date')
-        print(date)
-        usr = User(name=name,email=email,phone=number,subject=subject,message=message,date=date)
+        gender = request.POST.get("gender")
+        age = request.POST.get("age")
+        lifestyle = request.POST.get("lifestyle")
+        activity = request.POST.get("activity")
+        goal = request.POST.get("goal")
+        frequency = request.POST.get("frequency")
+        usr = User(name=name,email=email,phone=number,subject=subject,message=message,date=date,gender=gender,age=age,lifestyle=lifestyle,activity_level=activity,goal=goal,frequency=frequency)
         try:
             usr.save()
             return redirect(contact)
@@ -38,7 +42,13 @@ def homeS(request):
         name = request.POST.get("name")
         email = request.POST.get("email")
         number = request.POST.get("number")
-        usr = User(name=name,email=email,phone=number)
+        gender = request.POST.get("gender")
+        age = request.POST.get("age")
+        lifestyle = request.POST.get("lifestyle")
+        activity = request.POST.get("activity")
+        goal = request.POST.get("goal")
+        frequency = request.POST.get("frequency")
+        usr = User(name=name,email=email,phone=number,gender=gender,age=age,lifestyle=lifestyle,activity_level=activity,goal=goal,frequency=frequency)
         try:
             usr.save()
             return redirect(home)

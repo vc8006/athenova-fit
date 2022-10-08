@@ -16,61 +16,113 @@
 
   <div class="row">
 
-      <!--Grid column-->
       <div class="col-md-9 mb-md-0 mb-5">
           <form id="contact-form" name="contact-form" action="{% url 'contactS' %}" method="POST">
             {% csrf_token %}
-              <!--Grid row-->
               <div class="row">
 
-                  <!--Grid column-->
-                  <div class="col-md-6 my-2">
+                  <div class="col-md-4 my-2">
                       <div class="md-form mb-0">
                         <label for="name" class="">Your name</label>
                           <input type="text" id="name" style="background-color: rgb(240, 219, 219);" name="name" required class="form-control">
                       </div>
                   </div>
-                  <!--Grid column-->
 
-                  <!--Grid column-->
-                  <div class="col-md-6 my-2"> 
+                  <div class="col-md-4 my-2"> 
                       <div class="md-form mb-0">
                         <label for="email" class="">Your email</label>
                           <input type="text" id="email" style="background-color: rgb(240, 219, 219);" name="email" required class="form-control">
                       </div>
                   </div>
-                  <div class="col-md-6 my-2"> 
+                  <div class="col-md-4 my-2"> 
                       <div class="md-form mb-0">
                         <label for="email" class="">Phone Number</label>
                           <input type="text" id="email" style="background-color: rgb(240, 219, 219);" name="number" required class="form-control">
                       </div>
                   </div>
-                  <div class="col-md-6 my-2"> 
-                      <div class="md-form mb-0">
-                        <label for="email" class="">Type of Session Interested</label>
-                          <input type="text" id="email" style="background-color: rgb(240, 219, 219);" name="subject" class="form-control">
-                      </div>
-                  </div>
-                  <!--Grid column-->
+              
 
               </div>
-              <!--Grid row-->
 
-              <!--Grid row-->
-              <!-- <div class="row">
-                  <div class="col-md-12 my-2">
-                      <div class="md-form mb-0">
-                        <label for="subject" class="">Subject</label>
-                          <input type="text" id="subject" name="subject" class="form-control">
-                      </div>
-                  </div>
-              </div> -->
-              <!--Grid row-->
-
-              <!--Grid row-->
               <div class="row">
+                <div class="col-md-4 my-2"> 
+                        <div class="md-form mb-0">
+                          <label for="email" class="">Type of Session Interested</label>
+                            <input type="text" id="email" style="background-color: rgb(240, 219, 219);" name="subject" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4 my-2">
+                      <div class="md-form mb-0">
+                        <label for="email" class="">Gender</label>
+                        <select id="form132" name="gender" style="background-color: rgb(240, 219, 219);" placeholder="Gender" required
+                          class="form-control validate">
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                          </select>
+                      </div>
+                    </div>
+                    <div class="col-md-4 my-2">
+                      <div class="md-form mb-0">
+                        <label for="email" class="">Age</label>
+                        <input type="text" id="form133" name="age" style="background-color: rgb(240, 219, 219);" placeholder="Age" required
+                          class="form-control validate">
+                      </div>
+                    </div>
+                    
+                </div>
 
-                  <!--Grid column-->
+              <div class="row">
+                <div class="col-md-4 my-2">
+                  <div class="md-form mb-0">
+                    <label for="email" class="">Lifestyle</label>
+                    <select id="form134" name="lifestyle" style="background-color: rgb(240, 219, 219);" placeholder="Lifestyle" required
+                      class="form-control validate">
+                      <option value="Healthy">Healthy</option>
+                      <option value="Corporate">Corporate</option>
+                      <option value="City">City</option>
+                      <option value="Rural">Rural</option>
+                      <option value="Nomadic">Nomadic</option>
+                      </select>
+                  </div>
+                </div>
+                <div class="col-md-4 my-2">
+                  <div class="md-form mb-0">
+                    <label for="email" class="">Activity Level</label>
+                    <select id="form135" name="activity" style="background-color: rgb(240, 219, 219);" placeholder="Activity Level" required
+                    class="form-control validate">
+                    <option value="No exercise">No exercise</option>
+                    <option value="Occasional, light exercise">Occasional, light exercise</option>
+                    <option value="Regular exercise and training">Regular exercise and training</option>
+                    <option value="Daily training">Daily training</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-4 my-2">
+                  <div class="md-form mb-0">
+                    <label for="name" class="">Goal</label>
+                    <input type="text" id="form136" name="goal" style="background-color: rgb(240, 219, 219);" placeholder="Goal"
+                  class="form-control validate">
+                  </div>
+                </div>
+                
+              </div>
+
+             
+
+              <div class="row">
+                <div class="col-md-3 my-2">
+                  <div class="md-form mb-0">
+                    <label for="email" class="">Frequency</label>
+                    <select id="form137" name="frequency" style="background-color: rgb(240, 219, 219);" placeholder="Frequency" required
+                  class="form-control validate">
+                  <option value="2">2 days/week</option>
+                  <option value="3">3 days/week</option>
+                  <option value="4">4 days/week</option>
+                  <option value="5">5 days/week</option>
+                  <option value="6">6 days/week</option>
+                  </select>
+                  </div>
+                </div>
                   <div class="col-md-3 my-2">
 
                     <div class="md-form">
@@ -79,7 +131,7 @@
                     </div>
 
                 </div>
-                  <div class="col-md-9 my-2">
+                  <div class="col-md-6 my-2">
 
                       <div class="md-form">
                         <label for="message">Your message</label>
@@ -88,20 +140,12 @@
 
                   </div>
               </div>
-              <!--Grid row-->
 
               <input class="btn btn-primary text-center text-md-left my-2" style="background-color: blue;" type="submit" value="Send">
           
             </form>
-
-          <!-- <div class="text-center text-md-left my-2">
-              <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
-          </div> -->
-          <div class="status"></div>
       </div>
-      <!--Grid column-->
 
-      <!--Grid column-->
       <div class="col-md-3 text-center">
           <ul class="list-unstyled mb-0">
               <li><i class="fa fa-map-marker fa-2x"></i>

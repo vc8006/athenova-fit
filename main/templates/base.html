@@ -49,28 +49,80 @@
           </h5>
           </div>
           <div class="modal-body mx-1 mt-0">
+
+
             <form action="{% url 'homeS' %}" method="POST">
               {% csrf_token %}
-              <div class="md-form">
-                <i class="fas fa-user prefix grey-text"></i>
-                <!-- <label data-error="wrong" data-success="right" for="form34">Your name</label> -->
+              <div class="md-form mb-1">
                 <input type="text" id="form34" name="name" style="background-color: rgb(240, 219, 219);" placeholder="Full Name" required
                   class="form-control validate">
               </div>
 
-              <div class="md-form my-2">
-                <i class="fas fa-envelope prefix grey-text"></i>
-                <!-- <label data-error="wrong" data-success="right" for="form29">Your email</label> -->
+              <div class="md-form mb-1">
                 <input type="email" id="form29" name="email" style="background-color: rgb(240, 219, 219);" placeholder="Email address" required
                   class="form-control validate">
               </div>
 
-              <div class="md-form my-2">
-                <i class="fas fa-tag prefix grey-text"></i>
-                <!-- <label data-error="wrong" data-success="right" for="form32">Subject</label> -->
+              <div class="md-form mb-1">
                 <input type="text" id="form32" name="number" style="background-color: rgb(240, 219, 219);" placeholder="Contact Number" required
                   class="form-control validate">
               </div>
+
+              <div class="md-form mb-1">
+                <select id="form132" name="gender" style="background-color: rgb(240, 219, 219);" placeholder="Gender" required
+                  class="form-control validate">
+                  <option value="" disabled selected hidden>Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  </select>
+              </div>
+
+              <div class="md-form mb-1">
+                <input type="text" id="form133" name="age" style="background-color: rgb(240, 219, 219);" placeholder="Age" required
+                  class="form-control validate">
+              </div>
+
+              <div class="md-form mb-1">
+                <select id="form134" name="lifestyle" style="background-color: rgb(240, 219, 219);" placeholder="Lifestyle" required
+                  class="form-control validate">
+                  <option value="" disabled selected hidden>Lifestyle</option>
+                  <option value="Healthy">Healthy</option>
+                  <option value="Corporate">Corporate</option>
+                  <option value="City">City</option>
+                  <option value="Rural">Rural</option>
+                  <option value="Nomadic">Nomadic</option>
+                  </select>
+              </div>
+              
+
+              <div class="md-form mb-1">
+                <select id="form135" name="activity" style="background-color: rgb(240, 219, 219);" placeholder="Activity Level" required
+                  class="form-control validate">
+                  <option value="" disabled selected hidden>Activity Level</option>
+                  <option value="No exercise">No exercise</option>
+                  <option value="Occasional, light exercise">Occasional, light exercise</option>
+                  <option value="Regular exercise and training">Regular exercise and training</option>
+                  <option value="Daily training">Daily training</option>
+                  </select>
+              </div>
+
+              <div class="md-form mb-1">
+                <input type="text" id="form136" name="goal" style="background-color: rgb(240, 219, 219);" placeholder="Goal"
+                  class="form-control validate">
+              </div>
+
+              <div class="md-form mb-1">
+                <select id="form137" name="frequency" style="background-color: rgb(240, 219, 219);" placeholder="Frequency" required
+                  class="form-control validate">
+                  <option value="" disabled selected hidden class="fade">Frequency</option>
+                  <option value="2">2 days/week</option>
+                  <option value="3">3 days/week</option>
+                  <option value="4">4 days/week</option>
+                  <option value="5">5 days/week</option>
+                  <option value="6">6 days/week</option>
+                  </select>
+              </div>
+
               <div class="modal-footer d-flex justify-content-center">
                 <button class="btn btn-unique" type="submit" style="background-color:#e6b58d;"><span style="color: black;"> Send me the details </span> <i
                     class="fa fa-paper-plane-o ml-1" style="color: black;"></i></button>
