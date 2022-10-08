@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block bodyContent %}
+<div class="container-fluid">
+
+  <h1 style="color: #e6b58d;font-size:3rem;font-family: amanda;" class="text-center"> Gallery </h1>
+  <!-- Gallery -->
+  <div class="row">
+    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+      <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+        class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+
+      <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp" class="w-100 shadow-1-strong rounded mb-4"
+        alt="Wintry Mountain Landscape" />
+    </div>
+
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp" class="w-100 shadow-1-strong rounded mb-4"
+        alt="Mountains in the Clouds" />
+
+      <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+        class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+    </div>
+
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+        class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
+
+      <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp" class="w-100 shadow-1-strong rounded mb-4"
+        alt="Yosemite National Park" />
+    </div>
+  </div>
+  <!-- Gallery -->
+
+  <!-- <div class="row">
+    <div class="media-scroller media-scroller--with-groups snaps-inline">
+      {% for x in img %}
+
+      <div class="media-group">
+        <div class="media-element mx-2">
+          <img src="/media/{{x.photo}}" alt="">
+        </div>
+      </div> -->
+
+
+      <!-- <div class="scrollmenu">
+      <img src="/media/{{x.photo}}" alt="" class="" >
+    </div> -->
+
+      <!-- <div class="col-sm-4 col-xl-4 col-lg-4 service-box">
+      <div class="card m-2">
+        <img src="/media/{{x.photo}}" alt="" class="card-img-top" height="">
+      </div>
+    </div> -->
+      <!-- {% endfor %}
+    </div>
+  </div> -->
+
+</div>
+
+{% endblock %}

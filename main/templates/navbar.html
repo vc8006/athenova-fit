@@ -1,0 +1,48 @@
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Athenova Fit</title>
+
+  <link href="{% static 'css/animate.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href=" {% static 'css/bootstrap.min.css' %}" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %} ">
+  <link rel="stylesheet" href="{% static 'css/mystyle.css' %} ">
+
+
+  <nav class="navbar navbar-light navbar-expand-md justify-content-center mt-3">
+    <a class="navbar-brand" href="#">
+      <span style="font-style: italic; font-family: dobkin; font-size: 1.5rem;"  class="ath " >
+        Ahenova Fit
+      </span>
+      <!-- <img src="{% static 'images/athenova.png' %}" height="30px" width="50px"  alt="logo"> -->
+    </a>
+    <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse justify-content-between align-items-center w-100 navcontainer borderXwidth"  id="collapsingNavbar2">
+        <ul class="navbar-nav mx-auto text-center" >
+          <li class="nav-item">
+            <a class="nav-link" style="color: #e6b58d !important; font-family: amanda;" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: #e6b58d !important; font-family: amanda;" href="{% url 'gallery' %}">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: #e6b58d !important; font-family: amanda;" href="{% url 'Programs' %}">Programs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  style="color: #e6b58d !important; font-family: amanda;"href="{% url 'about' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: #e6b58d !important; font-family: amanda;" href="{% url 'contact' %}">Contact</a>
+          </li>
+        </ul>
+        <!-- <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+            <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-facebook mr-1"></i></a> </li>
+            <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-twitter"></i></a> </li>
+        </ul> -->
+    </div>
+</nav>
+</head>
