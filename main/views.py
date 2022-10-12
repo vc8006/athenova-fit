@@ -8,6 +8,9 @@ def home(request):
 def about(request):
     return render(request,"about.html")
 
+def events(request):
+    return render(request,"events.html")
+
 def Programs(request):
     return render(request,"Programs.html")
 

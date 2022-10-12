@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block bodyContent %}
+{% block head %}
 
 <style>
   .img-resize{
@@ -160,9 +160,14 @@
 }
 </style>
 
+{% endblock %}
+
+{% block bodyContent %}
+<div class="container">
+
 <div class="container-fluid">
 
-  <h1 style="color: #e6b58d;font-size:3rem;font-family: amanda;" class="text-center"> Gallery </h1>
+  <h1 style="color:  #FFF748;font-size:3rem;font-family: amanda;" class="text-center"> Gallery </h1>
   <!-- Gallery -->
 
   <div class="row">
@@ -454,7 +459,7 @@
       <!-- {% endfor %}
     </div>
   </div> -->
-
+</div>
 </div>
 
 {% endblock %}
