@@ -1,13 +1,20 @@
 {% extends 'base.html' %}
 
 {% block bodyContent %}
+
+<style>
+  .txt{
+    color: white !important;
+  }
+</style>
+
 <div class="container">
 
   <div class="container-fluid">
-    <section class="mb-4" style="color:  rgb(5, 5, 5); font-family: amanda;">
+    <section class="mb-4" style="color:  white; font-family: amanda;">
 
-      <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
-      <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us
+      <h2 class="h1-responsive font-weight-bold text-center my-4 txt" style="color: white !important;" >Contact us</h2>
+      <p class="text-center w-responsive mx-auto mb-5 txt">Do you have any questions? Please do not hesitate to contact us
         directly. Our team will come back to you within
         a matter of hours to help you.</p>
 
@@ -20,7 +27,7 @@
 
               <div class="col-md-4 my-2">
                 <div class="md-form mb-0">
-                  <label for="name" class="">Your name</label>
+                  <label for="name" class="txt">Your name</label>
                   <input type="text" id="name" style="background-color: rgb(240, 219, 219);" name="name" required
                     class="form-control">
                 </div>
@@ -28,14 +35,14 @@
 
               <div class="col-md-4 my-2">
                 <div class="md-form mb-0">
-                  <label for="email" class="">Your email</label>
+                  <label for="email" class="txt">Your email</label>
                   <input type="text" id="email" style="background-color: rgb(240, 219, 219);" name="email" required
                     class="form-control">
                 </div>
               </div>
               <div class="col-md-4 my-2">
                 <div class="md-form mb-0">
-                  <label for="email" class="">Phone Number</label>
+                  <label for="email" class="txt">Phone Number</label>
                   <input type="text" id="email" style="background-color: rgb(240, 219, 219);" name="number" required
                     class="form-control">
                 </div>
@@ -47,14 +54,14 @@
             <div class="row">
               <div class="col-md-4 my-2">
                 <div class="md-form mb-0">
-                  <label for="email" class="">Type of Session Interested</label>
+                  <label for="email" class="txt">Type of Session Interested</label>
                   <input type="text" id="email" style="background-color: rgb(240, 219, 219);" name="subject"
                     class="form-control">
                 </div>
               </div>
               <div class="col-md-4 my-2">
                 <div class="md-form mb-0">
-                  <label for="email" class="">Gender</label>
+                  <label for="email" class="txt">Gender</label>
                   <select id="form132" name="gender" style="background-color: rgb(240, 219, 219);" placeholder="Gender"
                     required class="form-control validate">
                     <option value="Male">Male</option>
@@ -64,7 +71,7 @@
               </div>
               <div class="col-md-4 my-2">
                 <div class="md-form mb-0">
-                  <label for="email" class="">Age</label>
+                  <label for="email" class="txt">Age</label>
                   <input type="text" id="form133" name="age" style="background-color: rgb(240, 219, 219);"
                     placeholder="Age" required class="form-control validate">
                 </div>
@@ -75,7 +82,7 @@
             <div class="row">
               <div class="col-md-4 my-2">
                 <div class="md-form mb-0">
-                  <label for="email" class="">Lifestyle</label>
+                  <label for="email" class="txt">Lifestyle</label>
                   <select id="form134" name="lifestyle" style="background-color: rgb(240, 219, 219);"
                     placeholder="Lifestyle" required class="form-control validate">
                     <option value="Healthy">Healthy</option>
@@ -88,7 +95,7 @@
               </div>
               <div class="col-md-4 my-2">
                 <div class="md-form mb-0">
-                  <label for="email" class="">Activity Level</label>
+                  <label for="email" class="txt">Activity Level</label>
                   <select id="form135" name="activity" style="background-color: rgb(240, 219, 219);"
                     placeholder="Activity Level" required class="form-control validate">
                     <option value="No exercise">No exercise</option>
@@ -100,7 +107,7 @@
               </div>
               <div class="col-md-4 my-2">
                 <div class="md-form mb-0">
-                  <label for="name" class="">Goal</label>
+                  <label for="name" class="txt">Goal</label>
                   <input type="text" id="form136" name="goal" style="background-color: rgb(240, 219, 219);"
                     placeholder="Goal" class="form-control validate">
                 </div>
@@ -113,7 +120,7 @@
             <div class="row">
               <div class="col-md-3 my-2">
                 <div class="md-form mb-0">
-                  <label for="email" class="">Frequency</label>
+                  <label for="email" class="txt">Frequency</label>
                   <select id="form137" name="frequency" style="background-color: rgb(240, 219, 219);"
                     placeholder="Frequency" required class="form-control validate">
                     <option value="2">2 days/week</option>
@@ -136,7 +143,7 @@
               <div class="col-md-6 my-2">
 
                 <div class="md-form">
-                  <label for="message">Your message</label>
+                  <label for="message" class="txt">Your message</label>
                   <textarea type="text" id="message" style="background-color: rgb(240, 219, 219);" name="message"
                     rows="2" class="form-control md-textarea"></textarea>
                 </div>
@@ -151,13 +158,13 @@
         </div>
 
         <div class="col-md-3 text-center">
-          <ul class="list-unstyled mb-0">
+          <ul class="list-unstyled mb-0 txt">
             <li><i class="fa fa-map-marker fa-2x"></i>
               <p>Seth House complex, 3rd Floor, Sangamwadi, Bund
                 Garden road, Pune - 411001</p>
             </li>
 
-            <li><i class="fa fa-phone mt-4 fa-2x"></i>
+            <li><i class="fa fa-phone mt-4 fa-2x txt"></i>
               <p>+91 7020565763</p>
             </li>
             <li>
