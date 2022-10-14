@@ -24,7 +24,8 @@
 
 <!-- <body class="bg-img" style="background-image: url('{% static "images/back.jpg"%}')";> -->
 
-<body style="background: linear-gradient(to bottom right, #000a35, #001368, #000c3f, #000416);">
+<body style="background: linear-gradient(to top, #09203f 0%, #537895 100%);">
+<!-- <body style="background: linear-gradient(to bottom right, #000a35, #001368, #000c3f, #000416);"> -->
   <!-- <div class="logo mt-3">
     <img src="{% static 'images/logo.png' %}" alt="">
 </div> -->
@@ -37,6 +38,8 @@
 
   {% block bodyContent %}
   {% endblock %}
+
+  {% include 'footer.html' %}  
 
   <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true">
@@ -186,6 +189,12 @@
   <script src="{% static 'js/bootstrap.min.js' %}"></script>
   <script>
 
+jQuery(document).ready(function() {
+  
+  var interval = setInterval(function() {
+    $('#modalContactForm').modal('show');
+  }, 25000)  
+});
 
     $(document).ready(function () {
       var today = new Date().toISOString().split('T')[0];

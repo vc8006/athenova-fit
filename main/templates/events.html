@@ -3,10 +3,283 @@
 
 {% block head %}
 
+<link rel="stylesheet" href="https://cdn.rawgit.com/stevenmonson/googleReviews/master/google-places.css">
+
 {% endblock %}
 
 {% block bodyContent %}
-<div class="container">
-Eventss
+
+<style>
+  .img-resize {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    object-position: center center;
+
+    /* margin-top: 8%; */
+    /* cursor: pointer; */
+  }
+
+
+
+  content-column {
+    width: 100%;
+
+    @media only screen and (min-width: 40em) {
+      width: 80%;
+    }
+
+    @media only screen and (min-width: 64em) {
+      max-width: 70%;
+      float: left;
+    }
+  }
+
+  .ad-column {
+    margin-top: 1em;
+    width: 300px;
+    float: right;
+  }
+
+  .list-title {
+    color: #9f9f9f;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  .events-list {
+    padding-left: 0px;
+    list-style-type: none;
+
+
+  }
+
+  .event-item {
+    border-bottom: 1px solid #eceeed;
+    margin-bottom: 1em;
+  }
+
+  .day-column {
+    max-width: 20%;
+    padding-top: 0.15em;
+    padding-right: 2em;
+    float: left;
+  }
+
+  .month-name {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+    text-transform: uppercase;
+
+    @media only screen and (min-width: 40em) {
+      text-align: right;
+    }
+  }
+
+  .day-name {
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 70%;
+  }
+
+  .title-column {
+    max-width: 80%;
+    float: left;
+  }
+
+  .title-name {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .event-title,
+  .event-details,
+  .event-category {
+    margin-bottom: 1em;
+  }
+
+  .event-details-list {
+    padding-bottom: 0em;
+    padding-left: 1em;
+
+
+  }
+
+  .event-details-item:nth-child(3) {
+    color: #9f9f9f;
+    font-style: italic;
+  }
+
+  .event-category-title {
+    color: #9f9f9f;
+  }
+
+  .event-category-name {
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .row-m {
+    margin-bottom: 5%;
+  }
+
+  @media screen and (max-width:500px) {
+    .row-m {
+      margin-bottom: 15%;
+    }
+  }
+
+  @media screen and (max-width:800px) {
+    .row-m {
+      margin-bottom: 8%;
+    }
+  }
+</style>
+<h1 style="color:  white;font-size:3rem;font-family: amanda;" class="text-center"> Events </h1>
+
+<div class="container" style="color: white;">
+  <div class="content-column">
+    <h2 class="list-title">Upcoming Events</h2>
+    <div class="events-listings jst">
+      <div class="row">
+        <div class="row row-m">
+          <div class="col-md-2">
+            <div>
+              <h4 class="month-name">Aug 5 </h4>
+              <h class="" style="font-size: small;"> wednesday </p>
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="event-title">
+              <h3 class="title-name">Gratiot Lake Road and Troy Graham to perform at Trust Fall Records</h3>
+            </div>
+            <div class="event-details">
+              <ul class="event-details-list">
+                <li class="event-details-item">
+                  <div>The Sinclair, Reed City</div>
+                </li>
+                <li class="event-details-item">
+                  <div>8:00 AM</div>
+                </li>
+              </ul>
+            </div>
+            <div class="event-category">
+              <div><span class="event-category-title">Category:</span> <a class="event-category-name" href="#">Community
+                  Events</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img class="img-resize" src="{% static 'images/101.jpg' %}" alt="">
+          </div>
+        </div>
+        <div class="row row-m">
+          <div class="col-md-2">
+            <div>
+              <h4 class="month-name">Aug 5 </h4>
+              <h class="" style="font-size: small;"> wednesday </p>
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="event-title">
+              <h3 class="title-name">Gratiot Lake Road and Troy Graham to perform at Trust Fall Records</h3>
+            </div>
+            <div class="event-details">
+              <ul class="event-details-list">
+                <li class="event-details-item">
+                  <div>The Sinclair, Reed City</div>
+                </li>
+                <li class="event-details-item">
+                  <div>8:00 AM</div>
+                </li>
+              </ul>
+            </div>
+            <div class="event-category">
+              <div><span class="event-category-title">Category:</span> <a class="event-category-name" href="#">Community
+                  Events</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img class="img-resize" src="{% static 'images/102.jpg' %}" alt="">
+          </div>
+        </div>
+        <div class="row row-m">
+          <div class="col-md-2">
+            <div>
+              <h4 class="month-name">Aug 5 </h4>
+              <h class="" style="font-size: small;"> wednesday </p>
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="event-title">
+              <h3 class="title-name">Gratiot Lake Road and Troy Graham to perform at Trust Fall Records</h3>
+            </div>
+            <div class="event-details">
+              <ul class="event-details-list">
+                <li class="event-details-item">
+                  <div>The Sinclair, Reed City</div>
+                </li>
+                <li class="event-details-item">
+                  <div>8:00 AM</div>
+                </li>
+              </ul>
+            </div>
+            <div class="event-category">
+              <div><span class="event-category-title">Category:</span> <a class="event-category-name" href="#">Community
+                  Events</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img class="img-resize" src="{% static 'images/103.jpg' %}" alt="">
+          </div>
+        </div>
+        <div class="row row-m">
+          <div class="col-md-2">
+            <div>
+              <h4 class="month-name">Aug 5 </h4>
+              <h class="" style="font-size: small;"> wednesday </p>
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="event-title">
+              <h3 class="title-name">Gratiot Lake Road and Troy Graham to perform at Trust Fall Records</h3>
+            </div>
+            <div class="event-details">
+              <ul class="event-details-list">
+                <li class="event-details-item">
+                  <div>The Sinclair, Reed City</div>
+                </li>
+                <li class="event-details-item">
+                  <div>8:00 AM</div>
+                </li>
+              </ul>
+            </div>
+            <div class="event-category">
+              <div><span class="event-category-title">Category:</span> <a class="event-category-name" href="#">Community
+                  Events</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img class="img-resize" src="{% static 'images/104.jpg' %}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 {% endblock %}

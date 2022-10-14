@@ -18,6 +18,40 @@
     height: 25vw;
     object-fit: cover;
 }
+.wrapper {
+	display: flex;
+	width: 750px;
+	margin: 0 auto;
+	overflow: hidden;
+	border-radius: 180px;
+	padding: 2.5rem;
+	background: #ddd;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.item {
+	animation: animate 25s alternate linear infinite;
+}
+.item:hover {
+	animation-play-state: paused;
+}
+@keyframes animate {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	100% {
+		transform: translate3d(-1100px, 0, 0);
+	}
+}
+@media (max-width:767px) {
+	.slider-area h2 {
+		font-size: 30px;
+	}
+	.wrapper {
+		width: 100%;
+		border-radius: 0;
+		padding: 0;
+	}
+}
 
 </style>
 {% endblock %}
@@ -27,24 +61,24 @@
 
 <div class="container-fluid" style="font-family: amanda;">
 
-  <h1 style="color:  #FFF748;" class="text-center my-3">About Us </h1>
-  <p class="lead" style="color:  #FFF748; font-size: 2rem;">Nurturing people and inspiring
+  <h1 style="color:  white;" class="text-center my-3">About Us </h1>
+  <!-- <p class="lead" style="color:  white; font-size: 2rem;">Nurturing people and inspiring
     lifestyle changes through skill
     and performance based fitness
-    programs.</p>
-  <p class="lead" style="color:  #FFF748;">We are a lifestyle and performance center located in the heart
+    programs.</p> -->
+  <p class="lead" style="color:  white;">We are a lifestyle and performance center located in the heart
     of Pune city. We offer certified, high quality skilled based
     classes and private training programs that are tailored made to
     the client and corporate requirements.</p>
-  <p class="lead" style="color:  #FFF748;">Athenova Fit has a combined 10 years of experience thanks to
+  <p class="lead" style="color:  white;">Athenova Fit has a combined 10 years of experience thanks to
     the trainers, founders and independent instructors who call this
     space their fitness hub. We are a team of like-minded individuals
     who are passionate about fitness and mindset.</p>
-  <p class="lead" style="color:  #FFF748;">We strive to help clients meet their goals and be part of their
-    fitness journey and discovery.</p>
+  <!-- <p class="lead" style="color:  white;">We strive to help clients meet their goals and be part of their
+    fitness journey and discovery.</p> -->
 
   <!-- <div class="container text-center mt-5 mb-2">
-    <h1 class="mb-0" style="color:  #FFF748;">Meet the Owners</h1>
+    <h1 class="mb-0" style="color:  white;">Meet the Owners</h1>
   </div> -->
   <!-- <span style="color: white;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</span> -->
 </div>
@@ -84,7 +118,7 @@
 </div> -->
 
 <div class="container text-center mt-5 mb-2" style="font-family: amanda;">
-  <h1 class="mb-0" style="color:  #FFF748;">Meet the Team</h1>
+  <h2 class="mb-0" style="color:  white;">Meet the Team</h2>
 </div>
 
 <div class="row text-center justify-content-center"> 
@@ -137,6 +171,9 @@
  
 </div>
 
+
+
+
 <div class="row text-center justify-content-center">
   <div class="col-xl-3 col-sm-6 mb-5" style="height: 100%;">
     <div class="bg-white rounded shadow-sm py-5 px-4"><img
@@ -167,23 +204,40 @@
   </div>
 </div>
 
-<div class="container-fluid" style="font-family: amanda;">
+
+<div class="slider-area mb-5">
+  <h2 style="color:  white !important; font-family: amanda;">Our Partners</h2>
+  <div class="wrapper" >
+    <div class="item"><img alt="" src="{% static 'images/img/1.png' %}"></div>
+    <div class="item"><img alt="" src="{% static 'images/img/2.png' %}"></div>
+    <div class="item"><img alt="" src="{% static 'images/img/3.png' %}"></div>
+    <div class="item"><img alt="" src="{% static 'images/img/4.png' %}"></div>
+    <div class="item"><img alt="" src="{% static 'images/img/5.png' %}"></div>
+  </div>
+</div>
+
+
+
+
+
+<div class="container-fluid mt-2" style="font-family: amanda;">
+  <h2 style="color:  white !important; font-family: amanda;">Our Vision</h2>
     
-  <h1 style="color:  #FFF748;" class="text-center my-3">Our Vision </h1>
-  <p class="lead" style="color:  #FFF748; font-size: 2rem;">To create a safe and energetic space to make people
+  <!-- <h1 style="color:  white;" class="text-center my-3">Our Vision </h1> -->
+  <!-- <p class="lead" style="color:  white; font-size: 2rem;">To create a safe and energetic space to make people
     feel better, stronger and unlock personal/physical
-    growth.</p>
-  <p class="lead" style="color:  #FFF748;">Our goal is always to have people leave our facility or workshop with a
+    growth.</p> -->
+  <p class="lead" style="color:  white;">Our goal is always to have people leave our facility or workshop with a
     smile on the face.</p>
-  <p class="lead" style="color:  #FFF748;">It is important to inspire ourselves and others and of course motivate.
+  <p class="lead" style="color:  white;">It is important to inspire ourselves and others and of course motivate.
     Motivation helps us to thrive, become better, learn and be consistent.
     Positive energy helps us with that, transferring this energy onto others
     is the best gift one can do and inspiration comes along with it.</p>
-  <p class="lead" style="color:  #FFF748;">For us, the performance and happiness of our clients is the top
+  <p class="lead" style="color:  white;">For us, the performance and happiness of our clients is the top
     priority. We are essentially a community that prioritize our clients
     throughout their fitness journey.</p>
-  <p class="lead" style="color:  #FFF748;">Out Motto: It's never late to start something new, to learn something
-    new, to be better than yesterday.</p>
+  <!-- <p class="lead" style="color:  white;">Out Motto: It's never late to start something new, to learn something
+    new, to be better than yesterday.</p> -->
   
   </div>
 </div>
