@@ -88,7 +88,6 @@
                 <option value="Healthy">Healthy</option>
                 <option value="Corporate">Corporate</option>
                 <option value="City">City</option>
-                <option value="Rural">Rural</option>
                 <option value="Nomadic">Nomadic</option>
               </select>
             </div>
@@ -141,6 +140,10 @@
   <script src="{% static 'js/jquery.min.js' %}"></script>
   <script src="{% static 'js/bootstrap.min.js' %}"></script>
   <script>
+
+$(function() {
+    $('.lazy').lazy();
+});
 
     jQuery(document).ready(function () {
       var interval = setInterval(function () {

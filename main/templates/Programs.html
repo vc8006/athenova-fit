@@ -8,6 +8,12 @@
     width: 100px;
     margin: 10px;
   }
+  .color-white{
+    color: white;
+  }
+  .lazy{
+    background-blend-mode: lighten;
+  }
 </style>
 <div class="container">
   <h1 style="color:  #e6b58d;font-size:3rem;font-family: amanda;" class="text-center mt-3"> What We Offer </h1>
@@ -16,13 +22,13 @@
 
       <div class="box-item col-xl-4">
         <div class="flip-box">
-          <div class="flip-box-front text-center" style="background-image: url('{% static 'images/programmes/cw1.jpg' %}');">
+          <div class="flip-box-front text-center lazy" style="background-image: url('{% static 'images/prog/1.jpg' %}');">
             <div class="inner color-white">
               <h3 class="flip-box-header">Corporate Workshops</h3>
               <img src="{% static 'images/arrow.png' %}" alt="" class="flip-box-img">
             </div>
           </div>
-          <div class="flip-box-back text-center" style="background-image: url('{% static 'images/programmes/cw2.jpg' %}');">
+          <div class="flip-box-back text-center lazy" style="background-image: url('{% static 'images/prog/2.jpg' %}');">
             <div class="inner color-white">
               <h3 class="flip-box-header">Corporate Workshops</h3>
               <a href="{% url 'contact' %}" style="text-decoration: none;">
@@ -34,13 +40,13 @@
       </div>
       <div class="box-item col-xl-4">
         <div class="flip-box">
-          <div class="flip-box-front text-center" style="background-image: url('{% static 'images/programmes/pilates2.jpg' %}');">
+          <div class="flip-box-front text-center lazy" style="background-image: url('{% static 'images/prog/4.jpg' %}');">
             <div class="inner color-white">
               <h3 class="flip-box-header">Pilates</h3>
               <img src="{% static 'images/arrow.png' %}" alt="" class="flip-box-img">
             </div>
           </div>
-          <div class="flip-box-back text-center" style="background-image: url('{% static 'images/programmes/pilates1.jpg' %}');">
+          <div class="flip-box-back text-center lazy" style="background-image: url('{% static 'images/prog/3.jpg' %}');">
             <div class="inner color-white">
               <h3 class="flip-box-header">Pilates</h3>
               <a href="{% url 'contact' %}" style="text-decoration: none;">
@@ -52,13 +58,13 @@
       </div>
       <div class="box-item col-xl-4">
         <div class="flip-box">
-          <div class="flip-box-front text-center" style="background-image: url('{% static 'images/programmes/pole2.jpg' %}');">
+          <div class="flip-box-front text-center lazy" style="background-image: url('{% static 'images/prog/12.jpg' %}');">
             <div class="inner color-white">
               <h3 class="flip-box-header">Pole Condition</h3>
               <img src="{% static 'images/arrow.png' %}" alt="" class="flip-box-img">
             </div>
           </div>
-          <div class="flip-box-back text-center" style="background-image: url('{% static 'images/programmes/pole1.jpg' %}');">
+          <div class="flip-box-back text-center lazy" style="background-image: url('{% static 'images/prog/6.jpg' %}');">
             <div class="inner color-white">
               <h3 class="flip-box-header">Pole Condition</h3>
               <a href="{% url 'contact' %}" style="text-decoration: none;">
@@ -70,13 +76,13 @@
       </div>
       <div class="box-item col-xl-4">
         <div class="flip-box">
-          <div class="flip-box-front text-center" style="background-image: url('{% static 'images/programmes/mma1.jpg' %}');">
+          <div class="flip-box-front text-center lazy" style="background-image: url('{% static 'images/prog/7.jpg' %}');">
             <div class="inner color-white">
               <h3 class="flip-box-header">MMA</h3>
               <img src="{% static 'images/arrow.png' %}" alt="" class="flip-box-img">
             </div>
           </div>
-          <div class="flip-box-back text-center" style="background-image: url('{% static 'images/programmes/mma2.jpg' %}');">
+          <div class="flip-box-back text-center lazy" style="background-image: url('{% static 'images/prog/8.jpg' %}');">
             <div class="inner color-white">
               <h3 class="flip-box-header">MMA</h3>
               <a href="{% url 'contact' %}" style="text-decoration: none;">
@@ -88,13 +94,13 @@
       </div>
       <div class="box-item col-xl-4">
         <div class="flip-box">
-          <div class="flip-box-front text-center" style="background-image: url('{% static 'images/programmes/boxing1.jpg' %}');">
+          <div class="flip-box-front text-center lazy" style="background-image: url('{% static 'images/prog/9.jpg' %}');">
             <div class="inner color-white">
               <h3 class="flip-box-header">Kickboxing</h3>
               <img src="{% static 'images/arrow.png' %}" alt="" class="flip-box-img">
             </div>
           </div>
-          <div class="flip-box-back text-center" style="background-image: url('{% static 'images/programmes/boxing3.jpg' %}');">
+          <div class="flip-box-back text-center lazy" style="background-image: url('{% static 'images/prog/10.jpg' %}');">
             <div class="inner color-white">
               <h3 class="flip-box-header">Kickboxing</h3>
               <a href="{% url 'contact' %}" style="text-decoration: none;">
@@ -106,13 +112,13 @@
       </div>
       <div class="box-item col-xl-4">
         <div class="flip-box">
-          <div class="flip-box-front text-center" style="background-image: url('{% static 'images/programmes/yoga1.jpg' %}');">
+          <div class="flip-box-front text-center lazy" style="background-image: url('{% static 'images/prog/11.jpg' %}');">
             <div class="inner color-white">
               <h3 class="flip-box-header">Yoga</h3>
               <img src="{% static 'images/arrow.png' %}" alt="" class="flip-box-img">
             </div>
           </div>
-          <div class="flip-box-back text-center" style="background-image: url('{% static 'images/programmes/yoga2.jpg' %}');">
+          <div class="flip-box-back text-center lazy" style="background-image: url('{% static 'images/prog/5.jpg' %}');">
             <div class="inner color-white">
               <h3 class="flip-box-header">Yoga</h3>
               <a href="{% url 'contact' %}" style="text-decoration: none;">
